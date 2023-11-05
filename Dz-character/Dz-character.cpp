@@ -40,7 +40,9 @@ public:
     Character(int up_health, char ch_gender, int new_age, int new_height):
         health(up_health),gender(ch_gender), age(new_age), height(new_height){}
 
-
+    void Set_health(int new_health) {
+        this->health = new_health;
+    }
 
     void Move() {
         std::cout << "Топ топ топ" << "\n";
@@ -108,7 +110,7 @@ int main()
     Hauberk Iron_armor("Железная броня");
     Helmet Iron_helmet("Железный шлем");
     Items sword("катана");
-    Character Peter(health, 'w', 20, 180);
+    Character Peter(health, 'm', 20, 180);
     Peter.Equim_item_Boots(&Scorohods);
     Peter.Equim_item_Hauberk(&Iron_armor); 
     Peter.Equim_item_helmet(&Iron_helmet);
